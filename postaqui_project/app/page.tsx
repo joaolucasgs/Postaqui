@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { Container } from "@mui/material";
 import Link from "next/link";
+import Destino from "./page"; // Importe o componente Destino
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -19,6 +21,8 @@ export default function Home() {
     complemento: "",
   });
 
+  const router = useRouter();
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -27,6 +31,10 @@ export default function Home() {
     }));
   };
 
+  const handleAvancar = () => {
+    const queryParams = new URLSearchParams(formData);
+    router.push(`/destino?${queryParams.toString()}`);
+  };
   return (
     <div className="flex min-h-screen items-center p-3 bg-[#FFCD40] flex-col">
       <Image src="/Postaqui.png" height={300} width={300} alt="Postaqui" />
@@ -42,7 +50,6 @@ export default function Home() {
               placeholder="Nome Completo"
               value={formData.nome}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -51,7 +58,6 @@ export default function Home() {
               placeholder="CPF"
               value={formData.cpf}
               onChange={handleInputChange}
-              required
             />
 
             <input
@@ -61,7 +67,6 @@ export default function Home() {
               placeholder="Telefone"
               value={formData.telefone}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -70,7 +75,6 @@ export default function Home() {
               placeholder="Seu email"
               value={formData.email}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -79,7 +83,6 @@ export default function Home() {
               placeholder="CEP"
               value={formData.cep}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -88,7 +91,6 @@ export default function Home() {
               placeholder="Estado"
               value={formData.estado}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -97,7 +99,6 @@ export default function Home() {
               placeholder="Cidade"
               value={formData.cidade}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -106,7 +107,6 @@ export default function Home() {
               placeholder="Bairro"
               value={formData.bairro}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -115,7 +115,6 @@ export default function Home() {
               placeholder="Rua"
               value={formData.rua}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -124,7 +123,6 @@ export default function Home() {
               placeholder="Numero"
               value={formData.numero}
               onChange={handleInputChange}
-              required
             />
             <input
               className="rounded-md p-2 mb-2"
@@ -133,14 +131,14 @@ export default function Home() {
               placeholder="Complemento"
               value={formData.complemento}
               onChange={handleInputChange}
-              required
             />
 
-            <Link href={{ pathname: "/destino", query: formData }}>
-              <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-sm">
-                Avançar
-              </div>
-            </Link>
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-sm"
+              onClick={handleAvancar} // Use a função handleAvancar
+            >
+              Avançar
+            </button>
           </form>
         </Container>
       </div>

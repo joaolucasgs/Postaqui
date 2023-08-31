@@ -33,5 +33,9 @@ export const useFormDataStore = create<FormStore>((set) => ({
     numero: '',
     complemento: '',
   },
-  setFormData: (data) => set({ formData: data }),
+  
+  setFormData: (data) => {
+    console.log('Dados do formulário atualizados:', data);  // Adicione esta linha
+    set({ formData: {...data} });
+  }
 }));
