@@ -53,7 +53,7 @@ export default function Home() {
               onChange={handleInputChange}
               required
             />
-            
+
             <input
               className="rounded-md p-2 mb-2"
               type="text"
@@ -135,13 +135,11 @@ export default function Home() {
               onChange={handleInputChange}
               required
             />
-            
-            
-            <Link
-              href={{ pathname: "/destino", query: formData }}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-sm"
-            >
-              Avançar
+
+            <Link href={{ pathname: "/destino", query: formData }}>
+              <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-sm">
+                Avançar
+              </div>
             </Link>
           </form>
         </Container>
