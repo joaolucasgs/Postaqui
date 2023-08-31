@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { Container } from "@mui/material";
 import Link from "next/link";
-import Destino from "./page"; // Importe o componente Destino
+import Destino from "./destino/page"; // Importe o componente Destino
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -34,6 +34,7 @@ export default function Home() {
   const handleAvancar = () => {
     const queryParams = new URLSearchParams(formData);
     router.push(`/destino?${queryParams.toString()}`);
+    console.log(queryParams.toString());
   };
   return (
     <div className="flex min-h-screen items-center p-3 bg-[#FFCD40] flex-col">

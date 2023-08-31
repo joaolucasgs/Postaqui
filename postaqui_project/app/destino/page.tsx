@@ -1,17 +1,18 @@
 'use client'
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const Destino = () => {
   const router = useRouter();
-  const queryParams = router.query; // Obtém os query parameters da rota
+  const { query } = useSearchParams();
 
   return (
     <div className="flex min-h-screen items-start justify-start p-3 bg-[#FFCD40] flex-col">
       <div className="flex  flex-col  p-3 bg-[#eab308] drop-shadow-2xl rounded-md">
         <h2 className="text-4xl font-bold mb-2">Dados do Remetente:</h2>
-        <p>Nome Completo: {queryParams.nome}</p>
-        <p>CPF: {queryParams.cpf}</p>
+        <p>Nome Completo: {query.get(`nome`)}</p>
+        <p>CPF: {query.get(`cpf`)}</p>
         {/* ... Resto das informações ... */}
       </div>
     </div>
