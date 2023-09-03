@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+Postaqui
+Este é um projeto simples que demonstra o uso de hooks, Next.js, Zustand, Tailwind CSS e Material UI.
 
-First, run the development server:
+O projeto consiste em duas páginas:
 
-```bash
+Home: Esta página permite ao usuário inserir dados pessoais.
+Destino: Esta página exibe os dados pessoais inseridos pelo usuário.
+Como usar
+Para usar o projeto, clone o repositório e instale as dependências:
+
+git clone https://github.com/bard/postaqui.git
+cd postaqui
+npm install
+Em seguida, inicie o servidor:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+O projeto estará disponível em http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tecnologias utilizadas
+Hooks: Os hooks são uma API que permite usar o estado e a ação do React sem escrever uma classe.
+Next.js: Next.js é um framework React para criar sites e aplicativos estáticos.
+Zustand: Zustand é um estado gerenciador leve para React.
+Tailwind CSS: Tailwind CSS é um framework CSS para criar estilos com classes.
+Material UI: Material UI é um kit de ferramentas de design para React.
+Demonstração
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Na página Home, o usuário pode inserir os seguintes dados pessoais:
 
-## Learn More
+Nome completo
+CPF
+Telefone
+Email
+CEP
+Estado
+Cidade
+Bairro
+Rua
+Número
+Complemento
+Ao clicar no botão Avançar, os dados são enviados para a página Destino. A página Destino exibe os dados pessoais inseridos pelo usuário.
 
-To learn more about Next.js, take a look at the following resources:
+Melhorias
+Algumas melhorias que podem ser feitas no projeto incluem:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Validação dos dados inseridos pelo usuário.
+Armazenamento dos dados inseridos pelo usuário no banco de dados.
+Autenticação do usuário.
+Espero que você ache este projeto útil.

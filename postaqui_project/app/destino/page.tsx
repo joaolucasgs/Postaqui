@@ -2,6 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
+import { Container } from "@mui/material";
 
 const Destino = () => {
   const router = useRouter();
