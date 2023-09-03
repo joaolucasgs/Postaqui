@@ -9,7 +9,7 @@ Destino: Esta página exibe os dados pessoais inseridos pelo usuário.
 Como usar
 Para usar o projeto, clone o repositório e instale as dependências:
 
-git clone https://github.com/bard/postaqui.git
+git clone[ https://github.com/bard/postaqui.git](https://github.com/joaolucasgs/Postaqui.git)
 cd postaqui
 npm install
 Em seguida, inicie o servidor:
