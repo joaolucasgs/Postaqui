@@ -10,11 +10,15 @@ Como usar
 Para usar o projeto, clone o repositório e instale as dependências:
 
 git clone https://github.com/joaolucasgs/Postaqui.git
+
 cd postaqui
+
 npm install
+
 Em seguida, inicie o servidor:
 
 npm run dev
+
 O projeto estará disponível em http://localhost:3000.
 
 Tecnologias utilizadas
@@ -29,22 +33,37 @@ Demonstração
 Na página Home, o usuário pode inserir os seguintes dados pessoais:
 
 Nome completo
+
 CPF
+
 Telefone
+
 Email
+
 CEP
+
 Estado
+
 Cidade
+
 Bairro
+
 Rua
+
 Número
+
 Complemento
+
 Ao clicar no botão Avançar, os dados são enviados para a página Destino. A página Destino exibe os dados pessoais inseridos pelo usuário.
 
 Melhorias
+
 Algumas melhorias que podem ser feitas no projeto incluem:
 
 Validação dos dados inseridos pelo usuário.
+
 Armazenamento dos dados inseridos pelo usuário no banco de dados.
+
 Autenticação do usuário.
+
 Espero que você ache este projeto útil.
